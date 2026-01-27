@@ -13,10 +13,10 @@ import { useFloating, Flex, Text } from "@valence-ui/core";
 
 function MyComponent() { 
     const floating = useFloating({
-        "left",       // Horizontal position.
-        "top",        // Vertical position
-        20,           // Offset
-    );
+        positionHorizontal: "left",
+        positionVertical: "top",
+        offset: 20,
+    });
     
     const FlexStyle = { 
         position: "fixed",
@@ -39,19 +39,19 @@ import { useFloating } from "@valence-ui/core";
 
 function MyComponent() { 
     const floating = useFloating({
-        "center",       
-        "top",        
+        positionHorizontal: "center",
+        positionVertical: "top",
         offset: { 
             horizontal: 20,        // Will accept any CSS-in-JS valid property
             vertical: "30%",
         }
-    );
+    });
     
     // OR
     
-    const floating = useFloating({
-        "left",       
-        "top",        
+    const floating2 = useFloating({
+        positionHorizontal: "left",
+        positionVertical: "top",
         offset: { 
             // Only the left and top styles will be applied in this case
             top: 20,
@@ -59,7 +59,7 @@ function MyComponent() {
             left: "2rem",
             right: 30,
         }
-    );
+    });
     
     // etc...
 }
@@ -72,10 +72,10 @@ import { useFloating } from "@valence-ui/core";
 
 function MyComponent() { 
     const floating = useFloating({
-        { default: "left", mobile: "right" },       
-        "top",        
+        positionHorizontal: { default: "left", mobile: "right" },
+        positionVertical: "top",
         offset: { default: 20, tablet: 12, mobile: 5 },
-    );
+    });
 }
 ```
 

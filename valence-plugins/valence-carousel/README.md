@@ -4,8 +4,8 @@ description: 'Last updated: 2.0.0 (22/01/2024)'
 
 # 🎠 Valence Carousel
 
-{% hint style="warning" %}
-This package is a Plugin package, meaning that it is designed to function alongside your chosen Discipline package, and should not be used alone. [Don't know what this means?](../../overview/getting-started.md)
+{% hint style="info" %}
+This package is a Plugin package, meaning that it provides additional functionality that may not be needed by all projects. It should be used alongside `@valence-ui/core` and `@valence-ui/utils`. [Don't know what this means?](../../overview/getting-started.md)
 {% endhint %}
 
 The Valence Carousel is a custom horizontal carousel component designed for maximum usability in desktop and mobile environments. It allows a user to interact with it via the browser's native horizontal scroll, by clicking and dragging, and with the controls on either side. This component is based closely on the image carousel in the Instagram Threads app.

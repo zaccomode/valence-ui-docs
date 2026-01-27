@@ -10,7 +10,7 @@ description: 'Last updated: 2.0.0 (21/01/2024)'
 import { Button, Spoiler, Text } from "@valence-ui/core";
 
 function MyComponent() { 
-    const [show, setShow] = React.useState(hide);
+    const [show, setShow] = React.useState(false);
 
     return ( 
         <>

@@ -40,12 +40,12 @@ function MyComponent() {
 By default, all items in the `buttons` prop will be stacked vertically from the top down. In some circumstances, you may want to display buttons at the bottom of the `Nav`, for which the `bottomButtons` prop becomes useful:
 
 ```tsx
-import { Nav } from "@valence-ui/app";
+import { AppNav } from "@valence-ui/core";
 import { IconCategory, IconLogout } from "@tabler/icons-react";
 
 function MyComponent() { 
     return ( 
-        <Nav
+        <AppNav
             buttons={[
                 {
                     id: "page1",
@@ -54,7 +54,7 @@ function MyComponent() {
                     to: "/page-1"
                 },
                 // More buttons...
-            ]},
+            ]}
             bottomButtons={[
                 {
                     id: "signOut",
@@ -62,7 +62,7 @@ function MyComponent() {
                     onClick: () => alert("Signed out")
                 },
                 // More buttons...
-            ]},
+            ]}
         />
     )
 }
@@ -77,12 +77,12 @@ On the `mobile` breakpoint, both regular and bottom buttons will be stacked next
 Every child of the `buttons` and `bottomButtons` prop accepts a `show` prop, which allows you to control the breakpoints at which this button is visible. This can be useful to hide specific buttons on the `mobile` breakpoint, especially if you have many buttons stacking across the smaller `Nav`.
 
 ```tsx
-import { Nav } from "@valence-ui/app";
+import { AppNav } from "@valence-ui/core";
 import { IconCategory } from "@tabler/icons-react";
 
 function MyComponent() { 
     return ( 
-        <Nav
+        <AppNav
             buttons={[
                 {
                     id: "page1",
@@ -107,13 +107,13 @@ function MyComponent() {
 The `Nav` component also accepts a `favicon` and `faviconProps`, which can be used to add a custom graphic, logo or icon at the top of the `Nav`. Note that the favicon will not show on `mobile` breakpoints.
 
 ```tsx
-import { Nav } from "@valence-ui/app";
+import { AppNav } from "@valence-ui/core";
 import { IconCategory } from "@tabler/icons-react";
 import FaviconImg from "./assets/images/favicon.png";
 
 function MyComponent() { 
     return ( 
-        <Nav
+        <AppNav
             favicon={FaviconImg}
             faviconProps={{
                 // Custom props to turn the favicon 

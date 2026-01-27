@@ -57,7 +57,7 @@ import "./assets/css/global.css"
 // The rest of your code...
 ```
 
-3. Finally, we can update the `ValenceProvider` to use our new font/s:
+4. Finally, we can update the `ValenceProvider` to use our new font/s:
 
 ```tsx
 // Some codefunction App() {
