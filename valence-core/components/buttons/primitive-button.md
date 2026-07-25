@@ -1,5 +1,5 @@
 ---
-description: 'Last updated: 3.0.0 (04/07/2024)'
+description: 'Last updated: 4.0.0'
 ---
 
 # Primitive button
@@ -11,14 +11,14 @@ This is a foundational component and should not be used by itself. Only use this
 ## Usage
 
 ```tsx
-import { PrimitiveButton } from "@valence-ui/core";
+import { PrimitiveButton, GlassMaterial } from "@valence-ui/core";
 
 function MyComponent() { 
     return ( 
         <PrimitiveButton
             size="md"
             radius="sm"
-            variant="light"
+            material={new GlassMaterial()}
         >
             My first button!
         </PrimitiveButton>
@@ -30,8 +30,10 @@ function MyComponent() {
 
 _Extends_ [_`GenericButtonProps`_](../../generics/generic-button-props.md)_._
 
-<table data-full-width="false"><thead><tr><th width="131.01472995090015">Property</th><th width="238">Type</th><th>Description</th></tr></thead><tbody><tr><td>motion</td><td><code>MotionBehaviourProps</code></td><td>Defines motion behavior for this button. This will automatically be overridden if the user has reduced motion enabled on their device.</td></tr><tr><td>float</td><td><a href="../../hooks/usefloating.md#props"><code>UseFloatingProps</code></a></td><td>Defines floating behavior for this button.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="131.01472995090015">Property</th><th width="238">Type</th><th>Description</th></tr></thead><tbody><tr><td>animation</td><td><a href="../../../core-concepts/animations.md"><code>AnimationProps</code></a></td><td>Enter, hover and tap animations for this button. Automatically disabled if the user has reduced motion enabled on their device. Defaults to <code>{ hoverAnimation: "raise", tapAnimation: "bounce" }</code>.</td></tr><tr><td>float</td><td><a href="../../hooks/usefloating.md#props"><code>UseFloatingProps</code></a></td><td>Defines floating behavior for this button.</td></tr></tbody></table>
 
 ## Changelog
+
+* **4.0.0:** Replaced `variant` with `material`, and `motion` with `animation`.
 
 * **3.0.0:** Added the `float` property, allowing all buttons to float like a FAB.

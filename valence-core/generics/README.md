@@ -10,6 +10,6 @@ Generics are shared prop interfaces that provide consistent behavior across rela
 
 ## How generics work
 
-Each component in Valence extends one or more generic interfaces. For example, all button components extend `GenericButtonProps`, which provides common properties like `variant`, `size`, and `disabled`.
+Each component in Valence extends one or more generic interfaces. For example, all button components extend `GenericButtonProps`, which provides common properties like `material`, `size`, and `disabled`.
 
 When reading component documentation, you'll often see "Extends `GenericButtonProps`" which means all the props from that generic interface are available on that component.

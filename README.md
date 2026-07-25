@@ -1,10 +1,14 @@
 ---
-description: 'Last updated: 3.0.0 (03/07/2024)'
+description: 'Last updated: 4.0.0'
 ---
 
 # 👋 Welcome to Valence
 
 Valence is an opinionated design system and React component library designed by Isaac Shea. It is currently in use in [Threaditor](https://threaditor.net/), and is designed to be completely usable across all platforms.
+
+{% hint style="info" %}
+**Valence 4 is here.** It replaces the `variant` prop with a composable [material system](core-concepts/materials/README.md), adds a declarative [animation system](core-concepts/animations.md), and requires React 19. See the [4.0.0 update notes](update-notes/4.0.0.md) to migrate.
+{% endhint %}
 
 ## Motivation
 

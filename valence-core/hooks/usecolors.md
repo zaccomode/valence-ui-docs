@@ -1,5 +1,5 @@
 ---
-description: 'Last updated: 2.7.0 (16/06/2024)'
+description: 'Last updated: 4.0.0'
 ---
 
 # UseColors
@@ -33,10 +33,16 @@ function MyComponent() {
 }
 ```
 
+{% hint style="warning" %}
+`getBgHex`, `getBorderHex` and `getFgHex` were removed in 4.0.0. They existed to resolve a `FillVariant` into a concrete color, and that job now belongs to [materials](../../core-concepts/materials/README.md).
+{% endhint %}
+
 ## Return type
 
-<table data-full-width="true"><thead><tr><th width="135">Attribute</th><th width="405">Type</th><th>Description</th></tr></thead><tbody><tr><td>getSwatch</td><td><code>(key: string | undefined):</code> <a href="../../core-concepts/color/color-types.md#swatchopacity"><code>Swatch</code></a> <code>| undefined</code></td><td>Gets the swatch for the given color key. If the color does not exist, this will return <code>undefined</code>.</td></tr><tr><td>getHex</td><td><code>(key: string | undefined, opacity?:</code> <a href="../../core-concepts/color/color-types.md#swatchopacity"><code>SwatchOpacity</code></a><code>): string | undefined</code></td><td>Gets the hex code for the given color key. If the color does not exist, this will return the key as-is.</td></tr><tr><td>getBgHex</td><td><code>(key: string, variant?: FillVariant, hovered?: boolean): string | undefined</code></td><td>Gets the most suitable background color, based upon the supplied parameters.</td></tr><tr><td>getBorderHex</td><td><code>(key: string, variant?: FillVariant, focused?: boolean)</code></td><td>Gets the most suitable border color, based upon the supplied parameters.</td></tr><tr><td>getFgHex</td><td><code>(key: string, variant?: FillVariant): string | undefined</code></td><td>Gets the most suitable foreground color, based upon the supplied parameters.</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="135">Attribute</th><th width="405">Type</th><th>Description</th></tr></thead><tbody><tr><td>getSwatch</td><td><code>(key: string | undefined):</code> <a href="../../core-concepts/color/color-types.md#swatchopacity"><code>Swatch</code></a> <code>| undefined</code></td><td>Gets the swatch for the given color key. If the color does not exist, this will return <code>undefined</code>.</td></tr><tr><td>getHex</td><td><code>(key: string | undefined, opacity?:</code> <a href="../../core-concepts/color/color-types.md#swatchopacity"><code>SwatchOpacity</code></a><code>): string | undefined</code></td><td>Gets the hex code for the given color key. If the color does not exist, this will return the key as-is.</td></tr></tbody></table>
 
 ### Changelog
+
+* **4.0.0:** removed `getBgHex`, `getBorderHex` and `getFgHex`. Use a [material](../../core-concepts/materials/README.md) instead.
 
 * **2.7.0:** added the `getBorderHex` method.

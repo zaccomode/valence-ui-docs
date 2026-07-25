@@ -33,6 +33,7 @@ Input components allow users to enter and modify data. Valence provides a compre
 All inputs share common props inherited from [`GenericInputProps`](../../generics/generic-input-props.md), including:
 
 - **`value`** and **`setValue`** - Controlled input state
-- **`size`**, **`radius`**, **`variant`** - Styling options
+- **`size`**, **`radius`** - Sizing options
+- **`material`** - The [material](../../../core-concepts/materials/README.md) that decides how the input looks
 - **`disabled`**, **`readOnly`**, **`required`** - State modifiers
 - **`loading`** - Loading state indicator

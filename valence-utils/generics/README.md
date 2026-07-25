@@ -5,7 +5,7 @@ Generics are TypeScript types and interfaces that form the foundation of Valence
 ## Available generics
 
 ### Core types
-- **[Global](global.md)** - Base types like `ComponentSize`, `FillVariant`, and `GenericProps`
+- **[Global](global.md)** - Base types like `ComponentSize`, `SizeClasses`, and `GenericProps`
 - **[Layout](layout.md)** - Layout-related prop interfaces
 - **[Grid](grid.md)** - CSS Grid prop interfaces
 

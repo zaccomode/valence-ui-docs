@@ -1,5 +1,5 @@
 ---
-description: 'Last modified: 2.0.0 (16/01/2024)'
+description: 'Last updated: 4.0.0'
 ---
 
 # Color
@@ -17,12 +17,16 @@ Valence makes use of a powerful yet unconventional color system that uses opacit
 Main article: [UseColors](../../valence-core/hooks/usecolors.md).
 {% endhint %}
 
-The `useColors` hook allows easy access to Valence's color palette, and exposes four unique functions that can be utilized in your code:
+The `useColors` hook allows easy access to Valence's color palette, and exposes two functions that can be utilized in your code:
 
 1. `getSwatch()` - Retrieves a swatch of a color from the palette, based on the color scheme the user has elected to use.
 2. `getHex()` - Retrieves a hex code for a color at the given key. This function will return a complete hex code (including opacity) for a given color.
-3. `getBgHex()` - This is an utility function to retrieve the best background color given the supplied `FillVariant`. This is the function used in all button components to determine their background color.
-4. `getFgHex()` - Similarly to `getBgHex()`, this method will return a suitable foreground color for a given `FillVariant`. This is the function used in all button components to determine their text/icon color.
+
+{% hint style="warning" %}
+**Changed in 4.0.0**
+
+`getBgHex()`, `getFgHex()` and `getBorderHex()` were removed. They resolved a `FillVariant` into a concrete color, which is now the job of [materials](../materials/README.md). If you are writing your own material, call `getHex()` directly.
+{% endhint %}
 
 Every function accepts a `key` parameter, which is the `key` value of a Valence `Color`. `key` will also accept the following:
 

@@ -12,7 +12,6 @@ Layout components help structure and organize content within your application. T
 ### Flexbox
 - **[Flex](flex/README.md)** - Flexible box layout container
   - **[Flex Center](flex/flex-center.md)** - Centered flex container
-  - **[Styled Flex](flex/styled-flex.md)** - Flex with variant styling
 
 ### Grid
 - **[Grid](grid.md)** - CSS Grid layout container
@@ -29,4 +28,4 @@ Layout components share common props from [`GenericLayoutProps`](../../../valenc
 
 - **`padding`**, **`margin`** - Spacing properties
 - **`width`**, **`height`** - Dimension properties
-- **`color`**, **`backgroundColor`** - Color properties
+- **`material`** - The [material](../../../core-concepts/materials/README.md) applied to the container (`Flex`, `Card`, `FloatingToolbar`)
