@@ -16,9 +16,10 @@ Buttons are interactive elements that allow users to trigger actions. Valence pr
 
 All buttons share common props inherited from [`GenericButtonProps`](../../generics/generic-button-props.md), including:
 
-- **`variant`** - The visual style (`subtle`, `light`, `filled`, `outlined`, or `paper`)
+- **`material`** - The [material](../../../core-concepts/materials/README.md) that decides how the button looks (`AirMaterial`, `GlassMaterial`, `PaperMaterial`, `SolidMaterial`, or your own)
 - **`size`** - The size class (`xs`, `sm`, `md`, `lg`, or `xl`)
 - **`radius`** - The border radius size
 - **`disabled`** - Whether the button is disabled
 - **`loading`** - Whether the button is in a loading state
 - **`float`** - Allows the button to float like a FAB (Floating Action Button)
+- **`animation`** - [Enter, hover and tap animations](../../../core-concepts/animations.md)

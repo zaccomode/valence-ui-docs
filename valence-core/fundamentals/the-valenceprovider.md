@@ -1,5 +1,5 @@
 ---
-description: 'Last updated: 2.6.0 (09/06/2024)'
+description: 'Last updated: 4.0.0'
 ---
 
 # 🎬 The ValenceProvider
@@ -26,18 +26,36 @@ export default App;
 ```
 {% endcode %}
 
+{% hint style="warning" %}
+**Changed in 4.0.0**
+
+`defaults.variant`, `defaults.transitionDuration` and `defaults.shadow` were removed. Their job now belongs to [materials](../../core-concepts/materials/README.md), configured through the new `materials` prop.
+{% endhint %}
+
 ## Modifying default attributes
 
 Every value that the ValenceProvider supplies to your app can be modified by passing in props to the component:
 
 {% code title="App.tsx" fullWidth="false" %}
 ```tsx
-import { ValenceProvider } from "@valence-ui/core"
+import {
+  ValenceProvider,
+  GlassMaterial,
+  PaperMaterial,
+  SolidMaterial,
+} from "@valence-ui/core"
 
 function App() {
   return ( 
     <>
       <ValenceProvider
+        primaryColor="blue"
+        defaults={{ size: "md", radius: "md" }}
+        materials={{
+          button: new SolidMaterial(),
+          input: new GlassMaterial({ color: "black" }),
+          card: new PaperMaterial({ elevation: 2 }),
+        }}
         breakpoints={{
           mobileWidth: 480,
           tabletWidth: 768,
@@ -72,6 +90,16 @@ export default App;
 **Description:**
 
 A list of all colors to use.
+
+{% hint style="danger" %}
+In 4.0.2 this **replaces** the default palette rather than extending it, which removes built-in keys such as `black` and `white` that materials depend on. Until that is fixed, spread the default palette yourself:
+
+```tsx
+import { ValenceProvider, DEFAULT_PALETTE } from "@valence-ui/core";
+
+<ValenceProvider colors={[...DEFAULT_PALETTE, myBrandColor]} />
+```
+{% endhint %}
 
 </details>
 
@@ -123,12 +151,6 @@ type defaults = {
     size: ComponentSize;
     /** The default component radius size */
     radius: ComponentSize;
-    /** The default component fill variant */
-    variant: FillVariant;
-    /** The default transition duration for animated properties */
-    transitionDuration: CSSProperties["transitionDuration"];
-    /** The default shadow style to apply */
-    shadow: CSSProperties["boxShadow"];  
 }
 ```
 
@@ -138,15 +160,45 @@ type defaults = {
 { 
     size: "sm",
     radius: "sm",
-    variant: "light",
-    transitionDuration: "0.1s",
-    shadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
 }
 ```
 
 **Description:**
 
-Default sizes and parameters for common attributes.
+Default sizes for common attributes.
+
+</details>
+
+<details>
+
+<summary>materials</summary>
+
+**Type:**
+
+```tsx
+type materials = { 
+    /** The default material to use for buttons */
+    button: Material;
+    /** The default material to use for inputs */
+    input: Material;
+    /** The default material to use for cards */
+    card: Material;
+}
+```
+
+**Default value:**
+
+```tsx
+{
+    button: new GlassMaterial(),
+    input: new GlassMaterial({ color: "black" }),
+    card: new PaperMaterial(),
+}
+```
+
+**Description:**
+
+The default [materials](../../core-concepts/materials/README.md) applied to objects of each type. Any component that accepts a `material` prop falls back to the relevant entry here.
 
 </details>
 
@@ -321,3 +373,7 @@ type breakpoints = {
 Breakpoints to use for determining breakpoint-sensitive props.
 
 </details>
+
+## Changelog
+
+* **4.0.0:** Added `materials`. Removed `defaults.variant`, `defaults.transitionDuration` and `defaults.shadow`.

@@ -1,5 +1,5 @@
 ---
-description: 'Last updated: 3.0.0 (03/07/2024)'
+description: 'Last updated: 4.0.0'
 ---
 
 # 🏄‍♂️ Getting started
@@ -12,9 +12,17 @@ Valence is designed to be usable across  web-apps and native applications (via s
 npm install @valence-ui/core @valence-ui/utils
 ```
 
+Valence 4 lists `react` and `react-dom` 19.1.0 as peer dependencies, so make sure your project is on React 19 before upgrading.
+
 Valence's two core packages, `core` and `utils`, are required for all projects that use Valence. `utils` includes basic type declarations and low-level utilities, and `core` contains components, hooks, and the "meat" of the system.
 
 {% hint style="warning" %}
+**Updated in Valence 4**
+
+Valence 4 requires **React 19**. It also replaces the `variant` prop with the [material system](../core-concepts/materials/README.md) — see the [4.0.0 update notes](../update-notes/4.0.0.md) for the full migration guide.
+{% endhint %}
+
+{% hint style="info" %}
 **Updated in Valence 3**
 
 Discipline packages have now been retired. This means that all components previously kept within the `app` package have been consolidated into the `core` package.

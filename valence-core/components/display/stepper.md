@@ -1,5 +1,5 @@
 ---
-description: 'Last updated: 2.1.0 (30/01/2024) | Added: 2.1.0'
+description: 'Last updated: 4.0.0'
 ---
 
 # Stepper
@@ -42,11 +42,11 @@ The Stepper does not expose any way to internally control the current step, as i
 
 _Extends_ [_`GenericProps`_](../../../valence-utils/generics/global.md)_._
 
-<table data-full-width="true"><thead><tr><th width="211">Property</th><th width="256">Type</th><th>Description</th></tr></thead><tbody><tr><td>currentStep (required)</td><td><code>number</code></td><td>The current step to display.</td></tr><tr><td>variant</td><td><code>FillVariant</code></td><td>The fill variant to use for this stepper.</td></tr><tr><td>size</td><td><code>ComponentSize</code></td><td>The size of this stepper.</td></tr><tr><td>color</td><td><code>CSSProperties["color"]</code></td><td>The color of this stepper.</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="211">Property</th><th width="256">Type</th><th>Description</th></tr></thead><tbody><tr><td>currentStep (required)</td><td><code>number</code></td><td>The current step to display.</td></tr><tr><td>material</td><td><a href="../../../core-concepts/materials/README.md"><code>Material</code></a></td><td>The material to apply to this stepper.</td></tr><tr><td>size</td><td><code>ComponentSize</code></td><td>The size of this stepper.</td></tr><tr><td>color</td><td><code>CSSProperties["color"]</code></td><td>The color of this stepper.</td></tr></tbody></table>
 
 ### StepperIndicatorProps
 
-<table data-full-width="true"><thead><tr><th width="157">Property</th><th width="260">Type</th><th>Description</th></tr></thead><tbody><tr><td>step (required)</td><td><code>number</code></td><td>The step number for this indicator.</td></tr><tr><td>state</td><td><a href="stepper.md#stepperindicatorstate"><code>StepperIndicatorState</code></a></td><td>The current state of this indicator.</td></tr><tr><td>variant</td><td><code>FillVariant</code></td><td>The fill variant to use for this indicator.</td></tr><tr><td>size</td><td><code>ComponentSize</code></td><td>The size of this indicator.</td></tr><tr><td>color</td><td><code>CSSProperties["color"]</code></td><td>The color of this indicator.</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="157">Property</th><th width="260">Type</th><th>Description</th></tr></thead><tbody><tr><td>step (required)</td><td><code>number</code></td><td>The step number for this indicator.</td></tr><tr><td>state</td><td><a href="stepper.md#stepperindicatorstate"><code>StepperIndicatorState</code></a></td><td>The current state of this indicator.</td></tr><tr><td>material</td><td><a href="../../../core-concepts/materials/README.md"><code>Material</code></a></td><td>The material to apply to this indicator.</td></tr><tr><td>size</td><td><code>ComponentSize</code></td><td>The size of this indicator.</td></tr></tbody></table>
 
 ### StepperIndicatorState
 
@@ -59,3 +59,7 @@ type StepperIndicatorState = "default" | "active" | "complete";
 _Extends_ [_`FlexProps`_](../layout/flex/#props)_._
 
 No unique props.
+
+## Changelog
+
+* **4.0.0:** Replaced `variant` with `material` on both the stepper and its indicators. `StepperIndicator` no longer takes a `color`.

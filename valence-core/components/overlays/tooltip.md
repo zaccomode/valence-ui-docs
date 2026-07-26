@@ -1,5 +1,5 @@
 ---
-description: 'Last updated: 2.0.0 (22/01/2024)'
+description: 'Last updated: 4.0.0'
 ---
 
 # Tooltip
@@ -100,12 +100,12 @@ _Extends_ [_`TooltipOptions`_](../../hooks/usetooltip.md)_._
 
 ### TooltipContentProps
 
-_Extends_ [_`StyledFlexProps`_](../layout/flex/styled-flex.md#props)_._
-
-<table data-full-width="true"><thead><tr><th width="185">Property</th><th width="263">Type</th><th>Description</th></tr></thead><tbody><tr><td>children (required)</td><td><code>string | ReactNode</code></td><td></td></tr><tr><td>withShadow</td><td><code>boolean</code></td><td>Whether to display a shadow underneath the tooltip.</td></tr><tr><td>zIndex</td><td><code>CSSProperties["zIndex"]</code></td><td>The z-index of the tooltip.</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="185">Property</th><th width="263">Type</th><th>Description</th></tr></thead><tbody><tr><td>children (required)</td><td><code>string | ReactNode</code></td><td>A plain string is wrapped in a centred <code>Text</code>; anything else is rendered as-is.</td></tr><tr><td>material</td><td><a href="../../../core-concepts/materials/README.md"><code>Material</code></a></td><td>The material of the tooltip. Defaults to <code>new SolidMaterial({ elevation: 3 })</code>.</td></tr><tr><td>radius</td><td><code>ComponentSize</code></td><td>The border radius of the tooltip. Defaults to <code>"xl"</code>.</td></tr><tr><td>padding</td><td><code>CSSProperties["padding"]</code></td><td>The padding of the tooltip. Defaults to <code>"5px 10px"</code>.</td></tr><tr><td>zIndex</td><td><code>CSSProperties["zIndex"]</code></td><td>The z-index of the tooltip. Defaults to <code>2</code>.</td></tr></tbody></table>
 
 ***
 
 ## Changelog
+
+* **4.0.0:** `TooltipContentProps` no longer extends `StyledFlexProps`. Replaced `withShadow` with `material`, and added `radius` and `padding`.
 
 * **2.2.0:** Uncontrolled tooltips will no longer show on [mobile breakpoints](../../hooks/usebreakpoint.md). Controlled tooltips (i.e. those that accept the `disclosure` prop) are unaffected.

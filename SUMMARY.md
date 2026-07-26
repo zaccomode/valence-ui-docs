@@ -11,6 +11,12 @@
 * [Color](core-concepts/color/README.md)
   * [List of colors](core-concepts/color/list-of-colors.md)
   * [Color types](core-concepts/color/color-types.md)
+* [Materials](core-concepts/materials/README.md)
+  * [Air Material](core-concepts/materials/air-material.md)
+  * [Glass Material](core-concepts/materials/glass-material.md)
+  * [Paper Material](core-concepts/materials/paper-material.md)
+  * [Solid Material](core-concepts/materials/solid-material.md)
+* [Animations](core-concepts/animations.md)
 * [Polymorphism](core-concepts/polymorphism.md)
 
 ## Valence Core
@@ -59,7 +65,6 @@
     * [Card](valence-core/components/layout/card.md)
     * [Flex](valence-core/components/layout/flex/README.md)
       * [Flex Center](valence-core/components/layout/flex/flex-center.md)
-      * [Styled Flex](valence-core/components/layout/flex/styled-flex.md)
     * [Floating Toolbar](valence-core/components/layout/floating-toolbar.md)
     * [Grid](valence-core/components/layout/grid.md)
     * [Header](valence-core/components/layout/header.md)
@@ -77,6 +82,7 @@
       * [Dynamic Sheet](valence-core/components/overlays/sheets/dynamic-sheet.md)
       * [Side Sheet](valence-core/components/overlays/sheets/side-sheet.md)
 * [🪝 Hooks](valence-core/hooks/README.md)
+  * [UseAnimation](valence-core/hooks/useanimation.md)
   * [UseColorScheme](valence-core/hooks/usecolorscheme.md)
   * [UseColors](valence-core/hooks/usecolors.md)
   * [UseControlledList](valence-core/hooks/usecontrolledlist.md)
@@ -117,6 +123,7 @@
 
 ## Update Notes
 
+* [4.0.0](update-notes/4.0.0.md)
 * [3.0.0](update-notes/3.0.0.md)
 * [2.7.0](update-notes/2.7.0.md)
 * [2.6.0](update-notes/2.6.0.md)

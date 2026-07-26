@@ -1,5 +1,5 @@
 ---
-description: 'Last updated: 3.0.0 (04/07/2024)'
+description: 'Last updated: 4.0.0'
 ---
 
 # Segmented Control
@@ -9,7 +9,7 @@ The Segmented Control is an input component that allows users to select one opti
 ## Usage
 
 ```tsx
-import { SegmentedControl } from "@valence-ui/core";
+import { SegmentedControl, GlassMaterial } from "@valence-ui/core";
 import { useState } from "react";
 
 function MyComponent() { 
@@ -30,7 +30,7 @@ function MyComponent() {
 By default, the option value will be used as the label. To provide custom labels, use the object form:
 
 ```tsx
-import { SegmentedControl } from "@valence-ui/core";
+import { SegmentedControl, GlassMaterial } from "@valence-ui/core";
 import { useState } from "react";
 
 function MyComponent() { 
@@ -78,7 +78,7 @@ function MyComponent() {
 ### Styling
 
 ```tsx
-import { SegmentedControl } from "@valence-ui/core";
+import { SegmentedControl, GlassMaterial } from "@valence-ui/core";
 import { useState } from "react";
 
 function MyComponent() { 
@@ -90,10 +90,9 @@ function MyComponent() {
             setValue={setValue}
             options={["option1", "option2", "option3"]}
             
-            variant="filled"
+            material={new GlassMaterial()}
             size="md"
             radius="md"
-            color="primary"
             equalWidth={true}
         />
     )
@@ -104,7 +103,7 @@ function MyComponent() {
 
 ## Props
 
-_Extends_ [_`GenericInputProps<string>`_](../../generics/generic-input-props.md) _and_ [_`StyledFlexProps`_](../layout/flex/styled-flex.md)_._
+_Extends_ [_`GenericInputProps<string>`_](../../generics/generic-input-props.md) _and_ [_`FlexProps`_](../layout/flex/README.md)_._
 
 <table data-full-width="true"><thead><tr><th width="180">Property</th><th width="280">Type</th><th>Description</th></tr></thead><tbody><tr><td>options (required)</td><td><code>SegmentedControlOption[]</code></td><td>A list of options to supply for the content of this input.</td></tr><tr><td>onSelect</td><td><code>(value: SegmentedControlOption) => void</code></td><td>Callback to be called when an option is selected.</td></tr><tr><td>equalWidth</td><td><code>boolean</code></td><td>Whether every option should have an equal width. Defaults to <code>true</code>.</td></tr><tr><td>buttonProps</td><td><code>PrimitiveButtonProps</code></td><td>Optional props to pass to the child button components.</td></tr></tbody></table>
 
@@ -122,3 +121,7 @@ type SegmentedControlOption =
         label?: string | ReactNode;
     };
 ```
+
+## Changelog
+
+* **4.0.0:** Replaced `variant` and `color` with `material`.
