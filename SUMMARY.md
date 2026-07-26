@@ -123,6 +123,7 @@
 
 ## Update Notes
 
+* [4.1.0](update-notes/4.1.0.md)
 * [4.0.0](update-notes/4.0.0.md)
 * [3.0.0](update-notes/3.0.0.md)
 * [2.7.0](update-notes/2.7.0.md)
